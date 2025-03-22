@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style_calculadora.css">
+    <title>Calculadoras</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="../IMG/logo.png" alt="pessoa segurando um peso de academia">
+            <a href="../index.html">GoFit</a>
+        </div>
+        <ul>
+            <li><a href="academia.html">Academia</a></li>
+            <li><a href="nutricao.html">Nutrição</a></li>
+            <li><a href="calculadoras.html">Calculadoras</a></li>
+            <li><a href="quemsomos.html">Quem somos</a></li>
+        </ul>
+    </nav>
+
+    <div class="menu-calculadora">
+        <button onclick="selecionarCalculadora('imc')">IMC</button>
+        <button onclick="selecionarCalculadora('proteina')">Proteína</button>
+        <button onclick="selecionarCalculadora('tmb')">TMB</button>
+        <button onclick="selecionarCalculadora('imc')">IMC</button>
+        <button onclick="selecionarCalculadora('proteina')">Proteína</button>
+        <button onclick="selecionarCalculadora('tmb')">TMB</button>
+    </div>
+
+    <!-- Explicação geral -->
+    <section id="explicacao" class="blocos_calculadora">
+        <div class="titulo_calculadora">
+            <h2 class="neon">Escolha uma Calculadora para Começar<h2>
+    
+            <p class="neon">Conheça nossas ferramentas e escolha a que mais atende às suas necessidades de saúde e bem-estar:</p>
+        </div>
+
+        <div id="explicacao" class="explicacao">
+
+            <div class="descricao-calculadora">
+                <h3>IMC (Índice de Massa Corporal)</h3>
+                <p>Com a calculadora de IMC, você poderá avaliar rapidamente se o seu peso está adequado para sua
+                    altura,
+                    ajudando a monitorar sua saúde e identificar se está em uma faixa de peso saudável.</p>
+            </div>
+
+            <div class="descricao-calculadora">
+                <h3>Proteína Ideal</h3>
+                <p>Calcule a quantidade de proteína que seu corpo necessita para manter ou aumentar a massa muscular de
+                    forma saudável, especialmente útil para quem treina ou busca melhorar a composição corporal.</p>
+            </div>
+
+            <div class="descricao-calculadora">
+                <h3>TMB (Taxa de Metabolismo Basal)</h3>
+                <p>A calculadora de TMB estima quantas calorias seu corpo queima em repouso. Isso ajuda a determinar
+                    suas
+                    necessidades energéticas diárias para manter, perder ou ganhar peso de forma saudável.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <div class="calculadora-container">
+        <!-- IMC -->
+        <section id="calculadora-imc" class="calculadora" style="display: none;">
+            <div class="titulo">
+                <h1>Calculadora de IMC</h1>
+                <button class="infoBtnIMC" id="infoBtnIMC" onclick="toggleInfo('infoIMC')">?</button>
+            </div>
+            <div class="calculadora-content">
+                <div class="imagem-calculadora">
+                    <img style="margin-left: 1000px;" src="" alt="" class="imagem-calculadora-img">
+                </div>
+                <div class="formulario-calculadora">
+                    <label for="peso">Peso (kg):</label>
+                    <input type="number" id="peso" placeholder="Digite seu peso">
+                    <label for="altura">Altura (m):</label>
+                    <input type="number" id="altura" placeholder="Digite sua altura">
+                    <button onclick="calcularIMC()">Calcular</button>
+                    <p>Resultado: <span id="resultadoIMC"></span></p>
+                </div>
+            </div>
+            <div id="infoIMC" class="info-aba" style="display: none;">O Índice de Massa Corporal (IMC) é uma medida
+                usada para avaliar se uma
+                pessoa
+                está dentro do peso
+                ideal. Ele é calculado dividindo o peso (kg) pela altura ao quadrado (m²). <br> <br>
+                <strong style="color: blue;">Classificação:</strong> <br>
+
+                Abaixo do peso: IMC < 18.5 <br>
+                    Peso normal: 18.5 ≤ IMC < 24.9 <br>
+                        Sobrepeso: 25.0 ≤ IMC < 29.9 <br>
+                            Obesidade: IMC ≥ 30.0
+            </div>
+        </section>
+
+
+        <!-- Proteína -->
+        <section id="calculadora-proteina" class="calculadora" style="display: none;">
+            <div class="titulo">
+                <h1>Calculadora de Proteína</h1>
+                <button class="infoBtnProteina" id="infoBtnProteina" onclick="toggleInfo('infoProteina')">?</button>
+            </div>
+            <div class="calculadora-content">
+                <div class="imagem-calculadora">
+                    <img src="" alt="" class="imagem-calculadora-img">
+                </div>
+                <div class="formulario-calculadora">
+                    <label for="pesoProteina">Peso (kg):</label>
+                    <input type="number" id="pesoProteina" placeholder="Digite seu peso">
+                    <label for="nivelAtividade">Nível de Atividade:</label>
+                    <select id="nivelAtividade">
+                        <option value="1.2">Sedentário</option>
+                        <option value="1.4">Leve</option>
+                        <option value="1.6">Moderado</option>
+                        <option value="1.8">Intenso</option>
+                        <option value="2.0">Muito Intenso</option>
+                    </select>
+                    <button onclick="calcularProteina()">Calcular</button>
+                    <p>Quantidade de Proteína: <span id="resultadoProteina"></span> g/dia</p>
+                </div>
+            </div>
+            <div id="infoProteina" class="info-aba" style="display: none; margin-top: -350px;">A proteína é um nutriente
+                essencial para o corpo humano, ajudando na
+                construção e reparação de tecidos. A quantidade necessária depende do peso e nível de atividade
+                física. <br>
+                <strong>Sedentário (1.2):</strong>Para pessoas com pouco ou nenhum exercício, apenas atividades diárias
+                básicas. <br>
+                <strong>Leve (1.4):</strong>Indivíduos com atividades diárias leves, como caminhadas ocasionais. <br>
+                <strong>Moderado (1.6):</strong>Pessoas que realizam exercícios regulares de intensidade média, como
+                corridas ou natação. <br>
+                <strong>Intenso (1.8): </strong>Indivíduos que treinam intensamente, como atletas ou praticantes de
+                musculação. <br>
+                <strong>Muito Intenso (2.0):</strong>Para atletas de elite ou pessoas com treinamento extremo..
+            </div>
+        </section>
+
+        <!-- TMB -->
+        <section id="calculadora-tmb" class="calculadora" style="display: none;">
+            <div class="titulo">
+                <h1>Calculadora de TMB</h1>
+                <button class="infoBtnTMB" id="infoBtnTMB" onclick="toggleInfo('infoTMB')">?</button>
+            </div>
+            <div class="calculadora-content">
+                <div class="imagem-calculadora">
+                    <img src="../IMG/tmb-image.png" alt="" class="imagem-calculadora-img">
+                </div>
+                <div class="formulario-calculadora">
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo">
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                    </select>
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" placeholder="Digite sua idade">
+                    <label for="pesoTMB">Peso (kg):</label>
+                    <input type="number" id="pesoTMB" placeholder="Digite seu peso">
+                    <label for="atividade">Nível de Atividade:</label>
+                    <select id="atividade">
+                        <option value="1.55">Leve</option>
+                        <option value="1.84">Moderada</option>
+                        <option value="2.2">Intensa</option>
+                    </select>
+                    <button onclick="calcularTMB()">Calcular</button>
+                    <p>Resultado: <span id="resultadoTMB"></span> calorias/dia</p>
+                </div>
+            </div>
+            <div id="infoTMB" class="info-aba" style="display: none;">O TMB (Taxa Metabólica Basal)...</div>
+        </section>
+
+    </div>
+
+    <footer>
+        <section class="rodape">
+            <p>© 2023 GoFit. All rights reserved.</p>
+            <p>informações</p>
+        </section>
+    </footer>
+
+    <script src="../JS/script_calculadora.js"></script>
+</body>
+
+</html>

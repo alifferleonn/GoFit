@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+* {
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR */
+#navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #6C63FF;
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    height: 2rem;
+}
+
+.logo a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: white;
+}
+
+#nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.3rem;
+}
+
+#nav-links li {
+    border: 0.25rem solid transparent;
+    border-radius: 1.5rem;
+    transition: border-color 0.3s;
+}
+
+#nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+#menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+#menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: flex;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #6C63FF;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
+}
+
+/* Conteúdo Principal */
+main {
+    margin-top: 6rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.sobre-nos h1 {
+    font-size: 2.8rem;
+    color: #6C63FF;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sobre-nos p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.missao-visao h2,
+.valores h2,
+.equipe h2 {
+    font-size: 2rem;
+    color: #6C63FF;
+    margin-bottom: 1rem;
+    border-left: 5px solid #6C63FF;
+    padding-left: 15px;
+}
+
+.missao-visao p,
+.valores p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Lista de valores */
+.valores ul {
+    list-style: none;
+    padding: 0;
+}
+
+.valores ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+    position: relative;
+    padding-left: 30px;
+}
+
+.valores ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #6C63FF;
+}
+
+/* Equipe */
+.equipe {
+    margin-top: 3rem;
+}
+
+.membros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.membro {
+    background-color: #fff;
+    width: 300px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membro img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.membro h3 {
+    font-size: 1.5rem;
+    color: #6C63FF;
+    margin-bottom: 1rem;
+}
+
+.membro p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.membro:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Rodapé */
+footer {
+    background-color: #d3d3d3;
+    padding: 2rem;
+    text-align: center;
+    color: #333;
+}
+
+footer a {
+    color: #6C63FF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animações */
+#nav-links.active {
+    display: flex;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#menu-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .membros {
+        flex-direction: column;
+        align-items: center;
+    }
+}

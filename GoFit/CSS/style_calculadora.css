@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    background-color: #5d5dd5;
+    margin-top: 100px;
+    background-image: url('../IMG/esteiras.jpg');
+    background-size: 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #6C63FF;
+    padding: 1rem 1rem;
+}
+
+#navbar .logo img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+#navbar .logo a {
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+#navbar ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+#navbar ul li {
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    transition: background 0.3s ease;
+}
+
+#navbar ul li:hover {
+    background-color: #5548d9;
+}
+
+.calculadora-container {
+    display: flex;
+
+    align-items: center;
+    margin-top: 150px;
+    padding: 1rem;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.calculadora {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+.calculadora h1 {
+    color: #6C63FF;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 2px solid #6C63FF;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #6d6c7c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1rem;
+    
+}
+
+button:hover {
+    background-color: #5548d9;
+}
+
+p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#resultadoIMC,
+#resultadoProteina {
+    font-weight: bold;
+    color: #685de0;
+}
+
+.imagem-imc img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+}
+
+#infoBtn1,
+#infoBtn2 {
+    background: #685de0;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#infoBtn1:hover,
+#infoBtn2:hover {
+    background: #5548d9;
+}
+
+footer {
+    background-color: #6C63FF;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer .rodape p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+.info-aba {
+    display: none;
+    position: absolute;
+    margin-top: -300px;
+    margin-left: 700px;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 420px;
+    z-index: 999;
+    background-color: #ada9ff;
+    backdrop-filter: blur(50px);
+}
+
+.info-abaProteina {
+    display: none;
+    position: absolute;
+    margin-top: -360px;
+    margin-left: -310px;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(211, 205, 205, 0.1);
+    width: 500px;
+    height: 400px;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.7);
+    
+}
+
+
+.info-aba.aberta,
+.info-abaProteina.aberta {
+    display: grid;
+    backdrop-filter: blur(50px);
+}
+
+
+#fecharAba,
+#fecharAbaProteina {
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
+.calculadora .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calculadora .titulo h1 {
+    margin-right: 10px;
+}
+
+#infoBtn1 {
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+#infoBtn2 {
+    margin-left: 0px;
+
+}
+
+.menu-calculadora {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 8rem;
+}
+
+.menu-calculadora button {
+    border: none; 
+    border-radius: 30px;
+    padding: 1rem;
+    font-size: 18px;
+    font-weight: bold;
+    color: white; 
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(0, 255, 136, 0.5);
+    max-width: 150px;
+    background-color: #5d5dd5;
+    box-shadow: 0px 5px 15px rgba(0, 204, 153, 0.5);
+    border: solid 0.3em;
+    border-style: hidden outset outset solid;
+}
+
+.menu-calculadora button:hover {
+    background-color: #887fe8;
+    transform: scale(1.05);
+}
+
+.menu-calculadora button:active {
+    transform: scale(0.95);
+}
+
+.blocos_calculadora {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 5rem;
+    
+    border-radius: 10px;
+}
+
+.titulo_calculadora {
+    margin: 2rem;
+    color: rgba(0, 255, 136, 0.5);
+}
+
+#explicacao {
+    display: flex;
+    gap: 100px;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    
+    /* backdrop-filter: blur(50px); */
+}
+
+#explicacao p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+   
+}
+
+.descricao-calculadora {
+
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(243, 236, 236, 0.05);
+    backdrop-filter: blur(20px);
+}
+
+.descricao-calculadora h3 {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 8px;
+}
+
+.descricao-calculadora p {
+    font-size: 14px;
+    color: #ffffff;
+    text-shadow: #0ff 5px 1px 10px;
+}
+
+.infoBtnProteina,
+.infoBtnIMC,
+.infoBtnTMB {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-top: -10px;
+}
+
+@keyframes neonGlow {
+    0% {
+      text-shadow: 
+        0 0 1.25px #0ff, 
+        0 0 2.5px #0ff, 
+        0 0 5px #0ff, 
+        0 0 10px #0ff;
+    }
+    50% {
+      text-shadow: 
+        0 0 2.5px #0ff, 
+        0 0 5px #0ff, 
+        0 0 7.5px #0ff, 
+        0 0 12.5px #0ff;
+    }
+    100% {
+      text-shadow: 
+        0 0 1.25px #0ff, 
+        0 0 2.5px #0ff, 
+        0 0 5px #0ff, 
+        0 0 10px #0ff;
+    }
+  }
+
+.neon {
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    animation: neonGlow 0.000001s infinite alternate;
+}

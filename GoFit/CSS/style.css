@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Work Sans", serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* NAVBAR */
+
+#navbar{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    position: fixed; /* Mantém a navbar fixa no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    background-color: #6C63FF;
+    padding: 1rem 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    height: 2rem;
+}
+
+.logo a {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: white;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.3rem;
+}
+
+#navbar ul li {
+    border: 0.25rem solid transparent;
+    border-radius: 1.5rem;
+    transition: border-color 0.3s;
+}
+
+#navbar ul a{
+    text-decoration: none;
+    color: white;
+}
+
+/* BEM VINDO */
+
+#bemvindo{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.7rem;
+}
+
+#bemvindo h1 {
+    font-size: 2.2rem;
+}
+
+/* SOBRE NOS */
+
+.sobre-nos{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Cria 2 colunas de mesma largura */
+    align-items: center;
+    justify-content: center;
+    background-color: #6C63FF;
+    height: 730px;
+}
+
+.sobre-nos-texto h1 {
+    font-size: 2.8rem;
+}
+
+.sobre-nos-texto p {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.sobre-nos-texto a img {
+    width: 6rem;
+    text-align: center;
+    margin-top: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.sobre-nos img {
+    width: 90%;
+}
+
+.sobre-nos-texto a img:hover {
+    transform: scale(1.1);
+}
+
+.sobre-nos-texto{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: start;
+    gap: 1rem;
+    margin-left: 7rem;
+    align-items: center;
+}
+/* CARDS*/
+
+.all-cards{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.card{
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card img {
+    border-radius: 100%;
+    height: 10rem;
+}
+
+.card a{
+    border: 4px solid #6C63FF;
+    border-radius: 2rem;
+    background-color: #6C63FF;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.rodape {
+    background-color: #d3d3d3;
+    margin-top: 3rem;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}

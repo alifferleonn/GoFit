@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GoFit - Treinos</title>
+  <link rel="stylesheet" href="../CSS/style_academia.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="logo">
+      <img src="../IMG/levantamento-de-peso.png" alt="GoFit Logo">
+      <a href="../index.html">GoFit</a>
+    </div>
+
+    <div id="menu-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul id="nav-links">
+      <li><a href="academia.html">Academia</a></li>
+      <li><a href="nutricao.html">Nutrição</a></li>
+      <li><a href="calculadoras.html">Calculadoras</a></li>
+      <li><a href="quemsomos.html">Quem somos</a></li>
+    </ul>
+  </nav>
+
+  <!-- TREINOS -->
+  <section class="treinos">
+    <h1>Treinos de Academia</h1>
+    <p class="descricao-treinos">Escolha o treino ideal para o seu objetivo e faça o download para seguir o plano na academia.</p>
+
+    <div class="cards">
+  
+      <div class="card">
+        <img src="../IMG/lose.jpg" alt="Emagrecimento">
+        <h3>Emagrecimento</h3>
+        <p>Treinos de alta intensidade para queimar gordura e melhorar a resistência.</p>
+        <button onclick="downloadTreino('emagrecimento')">Download Treino</button>
+      </div>
+  
+      <div class="card">
+        <img src="../IMG/gain.webp" alt="Ganho de Massa">
+        <h3>Ganho de Massa</h3>
+        <p>Exercícios com foco em hipertrofia para aumentar a massa muscular.</p>
+        <button onclick="downloadTreino('massa')">Download Treino</button>
+      </div>
+  
+      <div class="card">
+        <img src="../IMG/define.jpg" alt="Definição">
+        <h3>Definição</h3>
+        <p>Treinos combinando força e resistência para um corpo definido.</p>
+        <button onclick="downloadTreino('definicao')">Download Treino</button>
+      </div>
+  
+    </div>
+  </section>
+
+<!-- PRODUTOS AFILIADOS -->
+<section class="produtos-afiliados">
+  <h2>Produtos que Recomendamos</h2>
+  <p>Melhore sua performance com os melhores suplementos e acessórios!</p>
+
+  <!-- Setas -->
+  <div class="setas">
+    <button class="btn-seta" id="prev">&#10094;</button>
+    <button class="btn-seta" id="next">&#10095;</button>
+  </div>
+
+  <div class="produtos-container" id="carousel">
+    <div class="produto-card">
+      <img src="../IMG/strap.webp" alt="Strap para treino">
+      <h3>Strap para Treino</h3>
+      <p>Aumente a pegada e proteja os pulsos nos treinos pesados.</p>
+      <a href="#" target="_blank">Ver Produto</a>
+    </div>
+
+    <div class="produto-card">
+      <img src="../IMG/whey.webp" alt="Whey Protein">
+      <h3>Whey Protein</h3>
+      <p>Suplemento essencial para ganhar massa muscular.</p>
+      <a href="#" target="_blank">Ver Produto</a>
+    </div>
+
+    <div class="produto-card">
+      <img src="../IMG/hipercalorico.jpg" alt="Hipercalórico">
+      <h3>Hipercalórico</h3>
+      <p>Ganhe peso e massa muscular com facilidade.</p>
+      <a href="#" target="_blank">Ver Produto</a>
+    </div>
+
+    <div class="produto-card">
+      <img src="../IMG/pretreino.jpg" alt="Pré-Treino">
+      <h3>Pré-Treino</h3>
+      <p>Explosão de energia e foco para o seu treino render mais!</p>
+      <a href="#" target="_blank">Ver Produto</a>
+    </div>
+
+    <div class="produto-card">
+      <img src="../IMG/creatina.jpg" alt="Creatina">
+      <h3>Creatina</h3>
+      <p>Ganhe força, energia e maximize seus resultados!</p>
+      <a href="#" target="_blank">Ver Produto</a>
+    </div>
+
+    <div class="produto-card">
+      <img src="../IMG/coqueteleira.webp" alt="Coqueteleira">
+      <h3>Coqueteleira</h3>
+      <p>Ideal para misturar seus suplementos de forma prática!</p>
+      <a href="#" target="_blank">Ver Produto</a>
+    </div>
+
+    
+  </div>
+</section>
+
+
+
+  <section class="dicas-playlist-container">
+    <div class="dicas">
+        <h2>Dicas</h2>
+        <ul>
+            <li>Hidrate-se sempre</li>
+            <li>Mantenha uma alimentação balanceada</li>
+            <li>Descanse bem</li>
+            <li>Faça alongamentos</li>
+            <li>Respeite seus limites e evolua gradualmente</li>
+            <li>Faça o treino com foco na execução correta</li>
+            <li>Inclua exercícios para todos os grupos musculares</li>
+            <li>Use roupas e calçados adequados para treinar</li>
+            <li>Mantenha a constância, os resultados vêm com o tempo</li>
+        </ul>
+    </div>
+
+    
+
+    <div class="playlist">
+        <h2>Playlist para Treinar</h2>
+        <p>Confira nossa seleção de músicas para te motivar nos treinos!</p>
+        
+        <!-- Player do Spotify -->
+        <iframe style="border-radius:12px" 
+            src="https://open.spotify.com/embed/playlist/7DD7riEgqIZVWzlsd3aNn0?si=9dcdd902f6b44e9d" 
+            
+            width="100%" 
+            height="380" 
+            frameborder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="rodape">
+    <p>© 2024 GoFit. All rights reserved.</p>
+    <p>Informações</p>
+  </footer>
+
+  <script src="../JS/script_academia.js"></script>
+</body>
+</html>
